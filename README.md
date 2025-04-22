@@ -21,16 +21,3 @@
 вам необходимо создать два `CMakeList.txt` для двух простых приложений:
 * *hello_world*, которое использует библиотеку *formatter_ex*;
 * *solver*, приложение которое испольует статические библиотеки *formatter_ex* и *solver_lib*.
-
-**Удачной стажировки!**
-
-## Links
-- [Основы сборки проектов на С/C++ при помощи CMake](https://eax.me/cmake/)
-- [CMake Tutorial](http://neerc.ifmo.ru/wiki/index.php?title=CMake_Tutorial)
-- [C++ Tutorial - make & CMake](https://www.bogotobogo.com/cplusplus/make.php)
-- [Autotools](http://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html)
-- [CMake](https://cgold.readthedocs.io/en/latest/index.html)
-
-```
-Copyright (c) 2015-2021 The ISC Authors
-```
