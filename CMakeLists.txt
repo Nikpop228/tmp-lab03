@@ -1,36 +1,16 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.28.3)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(BUILD_EXAMPLES "Build examples" OFF)
+project(apps)
 
-project(print)
+#add_subdirectory(formatter_lib fr_lib)
 
-add_library(print STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/print.cpp)
+#add_subdirectory(formatter_ex_lib fr_ex_lib)
 
-target_include_directories(print PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-)
+#add_subdirectory(solver_lib sr_lib)
 
-if(BUILD_EXAMPLES)
-  file(GLOB EXAMPLE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/examples/*.cpp")
-  foreach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
-    get_filename_component(EXAMPLE_NAME ${EXAMPLE_SOURCE} NAME_WE)
-    add_executable(${EXAMPLE_NAME} ${EXAMPLE_SOURCE})
-    target_link_libraries(${EXAMPLE_NAME} print)
-    install(TARGETS ${EXAMPLE_NAME}
-      RUNTIME DESTINATION bin
-    )
-  endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
-endif()
+add_subdirectory(hello_world_application hello_world_app EXCLUDE_FROM_ALL)
 
-install(TARGETS print
-    EXPORT print-config
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-)
-
-install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
-install(EXPORT print-config DESTINATION cmake)
+add_subdirectory(solver_application solver_app EXCLUDE_FROM_ALL)
