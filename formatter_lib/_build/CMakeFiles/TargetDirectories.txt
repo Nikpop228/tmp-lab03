@@ -1,0 +1,3 @@
+/home/nikpop228/Nikpop228/workspace/projects/tmp-lab03/formatter_lib/_build/CMakeFiles/formatter.dir
+/home/nikpop228/Nikpop228/workspace/projects/tmp-lab03/formatter_lib/_build/CMakeFiles/edit_cache.dir
+/home/nikpop228/Nikpop228/workspace/projects/tmp-lab03/formatter_lib/_build/CMakeFiles/rebuild_cache.dir
